@@ -1,12 +1,16 @@
 const selectYearInput = document.getElementById("select-year");
 const attentionText = document.getElementById("attention-text");
-const testText = document.getElementById("test-text");
+const foodDivided = document.getElementById("food-area");
+const wordDivided = document.getElementById("word-area");
+const personDivided = document.getElementById("person-area");
+const eventDivided = document.getElementById("event-area");
 
 
 selectYearInput.addEventListener("input",() => {
   const selectYear = selectYearInput.value;
 
-  if(isNaN(Number(selectYear))){//入力された値が数値以外であった場合
+  if(isNaN(Number(selectYear))){
+    //入力された値が半角数値以外であった場合
     attentionText.innerHTML = "数値以外のものが含まれています"
     return ;
   }
@@ -15,12 +19,14 @@ selectYearInput.addEventListener("input",() => {
     attentionText.innerHTML = null
     return ;
   }else{
-   console.log(Number(selectYear));
-   testText.innerHTML = null;
+   foodDivided.innerHTML = null;
    
    for (const elem of descriptionOfYear) {
-    if(Object.keys(elem)[0] == Number(selectYear)){
-      testText.innerHTML = elem[Number(selectYear)].food;
+     console.log(elem);
+     console.log("表示"+Object.keys(elem));
+     console.log("表示"+Object.keys(elem));
+    if(Object.keys(elem) == Number(selectYear)){
+      foodDivided.innerHTML = elem[Number(selectYear)].food;
       return;
     }
   }
@@ -28,16 +34,41 @@ selectYearInput.addEventListener("input",() => {
   }
 })
 
+// データ
 const descriptionOfYear = [
   {
     "2019":{
-      "food":"kkkkk"
+      "food":"タピオカ",
+      "word":"タピる<br>あざまる水産"
     }
   },
   {
     "2020":{
-      "food":"タピオカ"
+      "food":"ダルゴナコーヒー",
+      "word":"〇〇しか勝たん"
     }
   },
-  
+  {
+    "2018":{
+      "food":"チーズダッカルビ",
+      "word":"aaaaaaa"
+    }
+  },
+  {
+    "2021":{
+      "food":"ピスタチオ,マリトッツォ"
+    }
+  },
+  {
+    "2017":{
+      "food":"チーズハットグ",
+      "words":"熱盛",
+      "person":"ブルゾンちえみ"
+    }
+  },
+  {
+    "2016":{
+      "food":"タピオカ"
+    }
+  },  
 ]
