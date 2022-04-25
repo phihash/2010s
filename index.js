@@ -10,9 +10,24 @@ selectYearInput.addEventListener("input",() => {
     return ;
   }
 
-  attentionText.innerHTML = null
-
+  if(selectYear.length != 4){
+    attentionText.innerHTML = null
+    return ;
+  }else{
   console.log(Number(selectYear));
-  console.log(typeof Number(selectYear));
+  }
+
 })
 
+const descriptionOfYear = [
+  {
+    2019:{
+      "food":"タピオカ"
+    }
+  },
+  {
+    2020:{
+      "food":"ダルゴナコーヒー"
+    }
+  }
+]
