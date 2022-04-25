@@ -22,11 +22,12 @@ selectYearInput.addEventListener("input",() => {
    foodDivided.innerHTML = null;
    
    for (const elem of descriptionOfYear) {
-     console.log(elem);
-     console.log("表示"+Object.keys(elem));
-     console.log("表示"+Object.keys(elem));
+    
     if(Object.keys(elem) == Number(selectYear)){
       foodDivided.innerHTML = elem[Number(selectYear)].food;
+      wordDivided.innerHTML = elem[Number(selectYear)].word;
+      personDivided.innerHTML = elem[Number(selectYear)].person;
+      eventDivided.innerHTML = elem[Number(selectYear)].event;
       return;
     }
   }
@@ -69,6 +70,11 @@ const descriptionOfYear = [
   {
     "2016":{
       "food":"タピオカ"
+    }
+  },  
+  {
+    "2014":{
+      "food":"パンケーキ"
     }
   },  
 ]
