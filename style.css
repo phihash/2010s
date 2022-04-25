@@ -23,6 +23,22 @@ main {
   background-color:  rgb(128, 122, 122);
 }
 
+.select-year-area{
+  background-color: aliceblue;
+  width: 100%;
+}
+
+.select-year{
+  display: block;
+  font-size: 1.6rem;
+  width: 70%;
+  margin:0 auto;
+}
+
+.attention-text{
+  font-size: 1rem;
+}
+
 .footer{
   background-color:  rgb(128, 122, 122);
 
