@@ -8,6 +8,8 @@
   <meta property="og:url" content="https://phihash.github.io/2010s/">
   <meta property="og:title" content="2010s">
   <meta property="og:description" content="過去を振り返るサイトです">
+  <link rel="apple-touch-icon" href="apple-touch-icon.PNG">
+  <link rel="icon" href="apple-touch-icon.PNG">
   <title>2010s</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +25,8 @@
     <main class="main">
 
       <div class="select-year-area">
-        <input type="text" inputmode="numeric" pattern="\d*" class="select-year" id="select-year" maxlength="4" placeholder="西暦を入力してください">
-        <p id="attention-text" class="attention-text">振り返りたい年を入力してください</p>
+
+        <input type="range" class="select-year" id="select-year" max="2022" min="2012">
       </div>
       <div id="result-area">
 

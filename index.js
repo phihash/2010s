@@ -1,24 +1,18 @@
 'use strict';
 const selectYearInput = document.getElementById("select-year");
-const attentionText = document.getElementById("attention-text");
 const resultDevided = document.getElementById("result-area");
 
 selectYearInput.addEventListener("input",() => {
   const selectYear = Number(selectYearInput.value);
-  if(isNaN(selectYear)){
-    //入力された値が半角数値以外であった場合
-    attentionText.innerHTML = "半角数字以外のものが含まれています";
-    return ;
-  }
 
-  attentionText.innerHTML = null;
+
   // resultDevided.innerHTML = null;
 
 
    for (const elem of descriptionOfYear) {
-      if(selectYear in elem){ 
+      if(selectYear in elem){
         resultDevided.innerHTML = null;
-        const {foods,words,persons,events} = elem[selectYear]; 
+        const {foods,words,persons,events} = elem[selectYear];
         const year =  document.createElement("h1");
         year.innerHTML = String(selectYear)+"年";
         resultDevided.appendChild(year);
@@ -58,7 +52,7 @@ function createDescriptionOfItem(obj,category){
 /**
  * ある要素の全ての子要素を削除する
  * @param
- * 
+ *
  */
 
 
@@ -276,6 +270,6 @@ const descriptionOfYear = [
       "food":["パンケーキ","仮"],
       "person":["日本エレキテル連合,妖怪ウォッチ","小保方","佐村河内守"],
     }
-  },  
+  },
 ]
 
