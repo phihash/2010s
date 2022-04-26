@@ -5,7 +5,7 @@
 }
 
 body{
-font-family: 'Fredoka One', cursive;
+  margin: 0;
 font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -20,22 +20,25 @@ main {
 }
 
 .header{
-  padding-top: 1rem;
+  font-family: 'Fredoka One', cursive;
+  color: #fcfcfc;
+  padding-top: 2rem;
   padding-bottom: 1rem;
-  background-color:  rgb(128, 122, 122);
+  background-color:  #ec6d4e;
 }
 
 .select-year-area{
-  background-color: aliceblue;
+  background-color: #ffe168;
   width: 100%;
   padding-top: 2.2rem;
   padding-bottom: 2.2rem;
 }
 
 .select-year{
+  font-family: 'Fredoka One', cursive;
   display: block;
-  font-size: 2rem;
-  width: 20%;
+  font-size: 3rem;
+  width: 30%;
   margin:0 auto;
 }
 
@@ -44,9 +47,11 @@ main {
 }
 
 .footer{
+  color: #fcfcfc;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color:  rgb(128, 122, 122);
+  background-color:  #ec6d4e;
+  font-family: 'Fredoka One', cursive;
 }
 
 
