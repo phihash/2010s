@@ -20,6 +20,8 @@ main {
 }
 
 .header{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color:  rgb(128, 122, 122);
 }
 
@@ -42,6 +44,8 @@ main {
 }
 
 .footer{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color:  rgb(128, 122, 122);
 }
 
