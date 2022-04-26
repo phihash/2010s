@@ -1,3 +1,4 @@
+'use strict';
 const selectYearInput = document.getElementById("select-year");
 const attentionText = document.getElementById("attention-text");
 const foodDivided = document.getElementById("food-area");
@@ -5,41 +6,58 @@ const wordDivided = document.getElementById("word-area");
 const personDivided = document.getElementById("person-area");
 const eventDivided = document.getElementById("event-area");
 
-
 selectYearInput.addEventListener("input",() => {
-  const selectYear = selectYearInput.value;
-
-  if(isNaN(Number(selectYear))){
+  const selectYear = Number(selectYearInput.value);
+  if(isNaN(selectYear)){
     //入力された値が半角数値以外であった場合
     attentionText.innerHTML = "数値以外のものが含まれています"
     return ;
   }
-
-  if(selectYear.length != 4){
-    attentionText.innerHTML = null
-    return ;
-  }else{
-   foodDivided.innerHTML = null;
    
    for (const elem of descriptionOfYear) {
-    
-    if(Object.keys(elem) == Number(selectYear)){
-      foodDivided.innerHTML = elem[Number(selectYear)].food;
-      wordDivided.innerHTML = elem[Number(selectYear)].word;
-      personDivided.innerHTML = elem[Number(selectYear)].person;
-      eventDivided.innerHTML = elem[Number(selectYear)].event;
-      return;
-    }
+      if(selectYear in elem){
+        const subtitle = document.createElement("h3");
+        subtitle.innerHTML = "Food";
+        const items = document.createElement("h4");
+        items.innerHTML = "タピオカ";
+        const para = document.createElement("p");
+        para.innerHTML = "taito";
+        foodDivided.append(subtitle,items,para)
+        wordDivided.innerHTML = elem[selectYear].word;
+        personDivided.innerHTML = elem[selectYear].person;
+        eventDivided.innerHTML = elem[selectYear].event;
+        return;
+      }
   }
 
-  }
+  
 })
+
+document.createElement("h3");
+document.createElement("h4");
+document.createElement("p");
 
 // データ
 const descriptionOfYear = [
   {
+    "2022":{
+      "food":[
+      {
+        "タピオカ":"ミルクティーと一緒に流行しました"
+      },
+      {
+        "":""
+      }],
+      "word":[
+        {"タピる":""},{"あざまる水産":""}
+      ]
+    }
+  },
+  {
     "2019":{
-      "food":"タピオカ",
+      "food":{
+        "タピオカ":"ミルクティー、"
+      },
       "word":"タピる<br>あざまる水産"
     }
   },
@@ -73,8 +91,17 @@ const descriptionOfYear = [
     }
   },  
   {
+    "2015":{
+      "food":"",
+      "word":"あったかいんだからぁ,本能寺の変"
+    }
+  },  
+  {
     "2014":{
-      "food":"パンケーキ"
+      "food":"パンケーキ",
+      "person":"日本エレキテル連合,妖怪ウォッチ",
+      "word":"ラッスンゴレライ",
     }
   },  
 ]
+
