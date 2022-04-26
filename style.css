@@ -56,6 +56,18 @@ main {
   padding-bottom: 2rem;
 }
 
+.category-name{
+  margin-top: 2.4rem;
+}
+
+.item-name {
+  padding-top: 1.6rem;
+}
+
+.text-of-item{
+  padding-top: 0.8rem;
+}
+
 .footer{
   color: #fcfcfc;
   padding-top: 1rem;
