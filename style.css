@@ -27,6 +27,7 @@ main {
   background-color: aliceblue;
   width: 100%;
   padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
 }
 
 .select-year{
@@ -43,3 +44,22 @@ main {
 .footer{
   background-color:  rgb(128, 122, 122);
 }
+
+
+
+/* slideInアニメーション */
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadein{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+

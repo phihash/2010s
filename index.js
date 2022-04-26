@@ -5,14 +5,17 @@ const foodDivided = document.getElementById("food-area");
 const wordDivided = document.getElementById("word-area");
 const personDivided = document.getElementById("person-area");
 const eventDivided = document.getElementById("event-area");
+const hogehoge = document.getElementById("hogehoge");
 
 selectYearInput.addEventListener("input",() => {
   const selectYear = Number(selectYearInput.value);
   if(isNaN(selectYear)){
     //入力された値が半角数値以外であった場合
-    attentionText.innerHTML = "数値以外のものが含まれています"
+    attentionText.innerHTML = "数値以外のものが含まれています";
     return ;
   }
+
+  attentionText.innerHTML = null;
    
    for (const elem of descriptionOfYear) {
       if(selectYear in elem){
@@ -26,16 +29,14 @@ selectYearInput.addEventListener("input",() => {
         wordDivided.innerHTML = elem[selectYear].word;
         personDivided.innerHTML = elem[selectYear].person;
         eventDivided.innerHTML = elem[selectYear].event;
+        hogehoge.classList.add("fadein");
+        // hogehoge.classList.remove("fadein"); 
         return;
       }
   }
 
   
 })
-
-document.createElement("h3");
-document.createElement("h4");
-document.createElement("p");
 
 // データ
 const descriptionOfYear = [
@@ -98,9 +99,9 @@ const descriptionOfYear = [
   },  
   {
     "2014":{
-      "food":"パンケーキ",
-      "person":"日本エレキテル連合,妖怪ウォッチ",
-      "word":"ラッスンゴレライ",
+      "food":["パンケーキ","仮"],
+      "person":["日本エレキテル連合,妖怪ウォッチ","小保方","佐村河内守"],
+      "word":["ラッスンゴレライ"],
     }
   },  
 ]
