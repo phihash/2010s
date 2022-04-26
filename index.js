@@ -1,11 +1,10 @@
 'use strict';
 const selectYearInput = document.getElementById("select-year");
 const attentionText = document.getElementById("attention-text");
-const foodDivided = document.getElementById("food-area");
 const wordDivided = document.getElementById("word-area");
 const personDivided = document.getElementById("person-area");
 const eventDivided = document.getElementById("event-area");
-const hogehoge = document.getElementById("hogehoge");
+const resultDevided = document.getElementById("result-area");
 
 selectYearInput.addEventListener("input",() => {
   const selectYear = Number(selectYearInput.value);
@@ -16,21 +15,13 @@ selectYearInput.addEventListener("input",() => {
   }
 
   attentionText.innerHTML = null;
-   
+
+
    for (const elem of descriptionOfYear) {
-      if(selectYear in elem){
-        const subtitle = document.createElement("h3");
-        subtitle.innerHTML = "Food";
-        const items = document.createElement("h4");
-        items.innerHTML = "タピオカ";
-        const para = document.createElement("p");
-        para.innerHTML = "taito";
-        foodDivided.append(subtitle,items,para)
+      if(selectYear in elem){ 
         wordDivided.innerHTML = elem[selectYear].word;
         personDivided.innerHTML = elem[selectYear].person;
         eventDivided.innerHTML = elem[selectYear].event;
-        hogehoge.classList.add("fadein");
-        // hogehoge.classList.remove("fadein"); 
         return;
       }
   }
@@ -41,16 +32,35 @@ selectYearInput.addEventListener("input",() => {
 // データ
 const descriptionOfYear = [
   {
-    "2022":{
+    "2021":{
       "food":[
       {
         "タピオカ":"ミルクティーと一緒に流行しました"
       },
       {
-        "":""
-      }],
+        "ピスタチオ":"ピスタチオを利用した商品と一緒に流行しました。"
+      }
+      ],
       "word":[
-        {"タピる":""},{"あざまる水産":""}
+        {
+          "タピる":"タピオカの流行を受け、タピオカを飲みに行くことをタピると言いました"
+        },
+        {
+          "あざまる水産":"ありがとうの意味を言います。"
+        }
+      ],
+      "person":[
+        {
+          "BE-FIRST":"オーディンから選出されました"
+        },
+        {
+          "INI":"韓国の某有名オーディション番組から11人がデビューしました"
+        }
+      ],
+      "event":[
+        {
+          "東京オリンピック":"コロナの影響で1年延期されましたが無事開催されました"
+        }
       ]
     }
   },
@@ -75,7 +85,7 @@ const descriptionOfYear = [
     }
   },
   {
-    "2021":{
+    "2022":{
       "food":"ピスタチオ,マリトッツォ"
     }
   },
