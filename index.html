@@ -4,25 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:url" content="https://phihash.github.io/2010s/">
+  <meta property="og:title" content="2010s">
+  <meta property="og:description" content="過去を振り返るサイトです">
   <title>2010s</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>2010s</h1>
-  </header>
-  <h2>2019年</h2>
-  <h3>食べ物</h3>
-  <h4>タピオカ</h4>
-  <p>ゴンチャなどの有名店を筆頭にタピオカミルクティーが流行しました</p>
-  <h4>チーズハットグ</h4>
-  <p>食べるとチーズがのび、その様子をSNSにアップする人で溢れました</p>
-  <h3>人物</h3>
-  <h4>りんごちゃん</h4>
-  <h3>ワード</h3>
-  <h4>まじ卍</h4>
-  <h3>出来事</h3>
-  <h4>新元号「令和」</h4>
+  <div class="Wrapper">
+    <header class="header">
+      <h1>2010s</h1>
+    </header>
+
+    <main class="main">
+
+      <div class="select-year-area">
+        <input type="text" inputmode="numeric" pattern="\d*" class="select-year" id="select-year" maxlength="4" placeholder="西暦を入力してください">
+        <p id="attention-text" class="attention-text">振り返りたい年を入力してください</p>
+      </div>
+      <div id="result-area">
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      @2010s footer
+    </footer>
+  </div>
+
+
   <script src="index.js"></script>
 </body>
 </html>
+

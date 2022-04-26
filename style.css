@@ -1,0 +1,113 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+font-family: 'Noto Sans JP', sans-serif;
+}
+
+.Wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.header{
+  font-family: 'Fredoka One', cursive;
+  color: #fcfcfc;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color:  #ec6d4e;
+  padding-left: 10%;
+}
+
+.select-year-area{
+  width: 100%;
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+}
+
+.select-year{
+  font-family: 'Fredoka One', cursive;
+  display: block;
+  font-size: 3rem;
+  width: 30vw;
+  margin:0 auto;
+}
+
+.select-year::placeholder{
+  font-size: 1.8rem;
+}
+
+.attention-text{
+  font-size: 1rem;
+}
+
+.main{
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.category-name{
+  margin-top: 2.4rem;
+}
+
+.item-name {
+  padding-top: 1.6rem;
+}
+
+.text-of-item{
+  padding-top: 0.8rem;
+}
+
+.footer{
+  color: #fcfcfc;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color:  #ec6d4e;
+  font-family: 'Fredoka One', cursive;
+  padding-left: 10%;
+
+}
+
+
+
+/* slideInアニメーション
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.fadein{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.fadeout{
+  animation-name: fadeOut;
+  animation-duration: 1s;
+} */
+
