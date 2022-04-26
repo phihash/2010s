@@ -26,12 +26,13 @@ main {
 .select-year-area{
   background-color: aliceblue;
   width: 100%;
+  padding-top: 2.2rem;
 }
 
 .select-year{
   display: block;
-  font-size: 1.6rem;
-  width: 70%;
+  font-size: 2rem;
+  width: 20%;
   margin:0 auto;
 }
 
@@ -41,5 +42,4 @@ main {
 
 .footer{
   background-color:  rgb(128, 122, 122);
-
 }
