@@ -22,10 +22,10 @@ selectYearInput.addEventListener("input",() => {
         const year =  document.createElement("h1");
         year.innerHTML = String(selectYear)+"年";
         resultDevided.appendChild(year);
-        resultDevided.append(createDescriptionOfItem(words,"🐇ワード"))
-        resultDevided.append(createDescriptionOfItem(foods,"🌭食べ物"))
-        resultDevided.append(createDescriptionOfItem(persons,"👶話題となった人物"))
-        resultDevided.append(createDescriptionOfItem(events,"📌出来事"))
+        resultDevided.append(createDescriptionOfItem(words,"🐇 ワード"))
+        resultDevided.append(createDescriptionOfItem(foods,"🌭 食べ物"))
+        resultDevided.append(createDescriptionOfItem(persons,"👶 話題となった人物"))
+        resultDevided.append(createDescriptionOfItem(events,"📌 出来事"))
         return;
       }
   }
@@ -77,7 +77,7 @@ const descriptionOfYear = [
       "persons":
         {
           "BE-FIRST":"オーディンから選出されました。<br>",
-          "INI":"韓国の某有名オーディション番組から11人がデビューしました"
+          "ま":"韓国の某有名オーディション番組から11人がデビューしました"
         },
       "events":{
           "東京オリンピック":"コロナの影響で1年延期されましたが無事開催されました"
@@ -100,7 +100,8 @@ const descriptionOfYear = [
           "INI":"韓国の某有名オーディション番組から11人がデビューしました"
         },
       "events":{
-          "東京オリンピック":"コロナの影響で1年延期されましたが無事開催されました"
+          "東京オリンピック":"コロナの影響で1年延期されましたが無事開催されました",
+          "東京オリンピック":"コロナの影響で1年延期されましたが無事開催されました",
       }
     }
   },{
@@ -198,8 +199,8 @@ const descriptionOfYear = [
       },
       "persons":
         {
-          "BE-FIRST":"オーディンから選出されました。<br>",
-          "INI":"韓国の某有名オーディション番組から11人がデビューしました"
+          "LISA":"オーディンから選出されました。<br>",
+          "NIziu":"韓国の某有名オーディション番組から11人がデビューしました"
         },
       "events":{
           "東京オリンピック":"コロナの影響で1年延期されましたが無事開催されました"
