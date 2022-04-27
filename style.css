@@ -36,10 +36,56 @@ main {
 
 .select-year{
   font-family: 'Fredoka One', cursive;
-  display: block;
   font-size: 3rem;
-  width: 30vw;
+  width: 40vw;
   margin:0 auto;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+
+  /* 背景色を指定 */
+  background-color: #D3D8B0;
+
+  /* 高さを指定 */
+  height: 22px;
+
+  /* 幅を指定 */
+  width: 100%;
+}
+
+input[type=range]::-moz-range-track {
+  background-color: green;
+}
+
+[type=range]{
+  width:800px;
+  -webkit-appearance: none;
+}
+[type=range]::-webkit-slider-runnable-track{
+  height: 20px;
+  background: red;
+  border-radius: 10px;
+}
+[type=range]::-moz-range-track{
+  height: 20px;
+  background: red;
+  border-radius: 10px;
+}
+
+[type="range"]::-webkit-slider-thumb{
+ -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="30" width="30"><circle cx="15" cy="15" r="15" fill="red" /></svg>') no-repeat 0 0;
+}
+[type="range"]::-moz-range-thumb{
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="30" width="30"><circle cx="15" cy="15" r="15" fill="red" /></svg>') no-repeat 0 0;
 }
 
 .select-year::placeholder{
