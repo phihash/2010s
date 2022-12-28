@@ -3,25 +3,30 @@ import { descriptionOfYear } from "./dataset.js"
 const selectYearInput = document.getElementById("select-year");
 const resultDevided = document.getElementById("result-area");
 
-selectYearInput.addEventListener("input",() => {
+function viewContent(){
   const selectYear = Number(selectYearInput.value);
   // resultDevided.innerHTML = null;
    for (const elem of descriptionOfYear) {
       if(selectYear in elem){
         resultDevided.innerHTML = null;
-        const {foods,words,persons,events} = elem[selectYear];
+        const {hits,words,persons,events} = elem[selectYear];
         const year =  document.createElement("h1");
         year.innerHTML = String(selectYear)+"年";
         resultDevided.appendChild(year);
-        resultDevided.append(createDescriptionOfItem(words,"🐇 ワード"))
-        resultDevided.append(createDescriptionOfItem(foods,"🌭 食べ物"))
-        resultDevided.append(createDescriptionOfItem(persons,"👶 話題となった人物"))
-        resultDevided.append(createDescriptionOfItem(events,"📌 出来事"))
+        resultDevided.append(createDescriptionOfItem(hits,"🎈 ヒット"));
+        resultDevided.append(createDescriptionOfItem(words,"🐇 ワード"));
+        resultDevided.append(createDescriptionOfItem(persons,"👶 人物"));
+        resultDevided.append(createDescriptionOfItem(events,"📌 出来事"));
         return;
       }
   }
+}
 
+
+selectYearInput.addEventListener("input",() => {
+  viewContent();
 })
+
 
 /**
  * ある項目とその項目を説明する要素を生成する
@@ -47,4 +52,4 @@ function createDescriptionOfItem(obj,category){
 }
 
 
-
+viewContent(); // 1度目あとはinputのリスナーを随時
